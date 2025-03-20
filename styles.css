@@ -136,7 +136,7 @@ body {
     height: 420px;
     border-radius: 15px;
     object-fit: cover;
-    filter: contrast(1.2) brightness(0.9) saturate(1.5) hue-rotate(-15deg);
+    /* filter: contrast(1.2) brightness(0.9) saturate(1.5) hue-rotate(-15deg); */
     box-shadow: 0 0 20px rgba(255, 64, 129, 0.5);
     transition: transform 0.3s ease-in-out;
 }
