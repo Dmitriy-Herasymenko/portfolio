@@ -1,133 +1,249 @@
 <!DOCTYPE html>
 <html lang="uk">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio | Dmytro</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
-</head>
-<body>
-
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
     <header class="hero">
-        <div class="stars"></div>
-        <div class="container">
-            <h1 class="title">Dmytro Herasymenko</h1>
-            <p class="subtitle">Fullstack Developer</p>
-            <div class="tech-icons">
-                <img src="./assets/icons/CSS3_logo.svg" alt="Css">
-                <img src="./assets/icons/Sass_Logo_Color.svg" alt="Sass">
-                <img src="./assets/icons/Bootstrap_logo.svg" alt="Bootsrtrap">
-                <img src="./assets/icons/Tailwind_CSS_Logo.svg" alt="Tailwind">
-                <img src="./assets/icons/JavaScript-logo.png" alt="JS">
-                <img src="./assets/icons/React-icon.svg" alt="React">
-                <img src="./assets/icons/Nextjs-logo.svg" alt="Next.js">
-                <img src="./assets/icons/Node.js_logo.svg" alt="Node.js">
-                <img src="./assets/icons/NestJS.svg" alt="Nest.js">
-            </div>
-            <a href="#about" class="btn">About Me</a>
+      <div class="stars"></div>
+      <div class="container">
+        <h1 class="title">Dmytro Herasymenko</h1>
+        <p class="subtitle">Fullstack Developer</p>
+        <div class="tech-icons">
+          <img src="./assets/icons/CSS3_logo.svg" alt="Css" />
+          <img src="./assets/icons/Sass_Logo_Color.svg" alt="Sass" />
+          <img src="./assets/icons/Bootstrap_logo.svg" alt="Bootsrtrap" />
+          <img src="./assets/icons/Tailwind_CSS_Logo.svg" alt="Tailwind" />
+          <img src="./assets/icons/JavaScript-logo.png" alt="JS" />
+          <img src="./assets/icons/React-icon.svg" alt="React" />
+          <img src="./assets/icons/Nextjs-logo.svg" alt="Next.js" />
+          <img src="./assets/icons/Node.js_logo.svg" alt="Node.js" />
+          <img src="./assets/icons/NestJS.svg" alt="Nest.js" />
         </div>
+        <a href="#about" class="btn">About Me</a>
+      </div>
     </header>
 
     <section id="about">
-        <div class="container about-container">
-            <div class="about-image">
-                <img src="https://media.gq-magazine.co.uk/photos/5d1392c4533a23ca42c61dad/master/w_2580%2Cc_limit/Rob-Lowe-GQ_23July15_getty_b.jpg" alt="Retro Portrait" class="retro-image">
-            </div>
-            <div class="about-text">
-                <h2>About me</h2>
-                <p>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
-                </p>
-            </div>
+      <div class="container about-container">
+        <div class="about-image">
+          <img
+            src="https://media.gq-magazine.co.uk/photos/5d1392c4533a23ca42c61dad/master/w_2580%2Cc_limit/Rob-Lowe-GQ_23July15_getty_b.jpg"
+            alt="Retro Portrait"
+            class="retro-image"
+          />
         </div>
+        <div class="about-text">
+          <h2>About me</h2>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book. It has survived not
+            only five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged. It was popularised in the 1960s
+            with the release of
+          </p>
+        </div>
+      </div>
     </section>
 
     <section id="works">
-        <div class="container">
-            <h2 class="section-title">My Works</h2>
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="https://i0.wp.com/365webresources.com/wp-content/uploads/2023/03/ArFa-Admin-Dashboard-scaled.webp?ssl=1" alt="Проект 1"></div>
-                    <div class="swiper-slide"><img src="https://i0.wp.com/365webresources.com/wp-content/uploads/2023/03/ArFa-Admin-Dashboard-scaled.webp?ssl=1" alt="Проект 2"></div>
-                    <div class="swiper-slide"><img src="https://i0.wp.com/365webresources.com/wp-content/uploads/2023/03/ArFa-Admin-Dashboard-scaled.webp?ssl=1" alt="Проект 3"></div>
-                    <div class="swiper-slide"><img src="https://i0.wp.com/365webresources.com/wp-content/uploads/2023/03/ArFa-Admin-Dashboard-scaled.webp?ssl=1" alt="Проект 4"></div>
-                    <div class="swiper-slide"><img src="https://i0.wp.com/365webresources.com/wp-content/uploads/2023/03/ArFa-Admin-Dashboard-scaled.webp?ssl=1" alt="Проект 5"></div>
-                    <div class="swiper-slide"><img src="https://i0.wp.com/365webresources.com/wp-content/uploads/2023/03/ArFa-Admin-Dashboard-scaled.webp?ssl=1" alt="Проект 6"></div>
+      <div class="container">
+        <h2 class="section-title">My Works</h2>
+        <div class="swiper mainSwiper">
+          <div class="swiper-wrapper">
+            <!-- Swisstronik -->
+            <div class="swiper-slide">
+              <div class="project">
+                <div class="project-slider swiper subSwiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img
+                        src="/assets/img/swisstronik1.png"
+                        alt="Swisstronik Screenshot 1"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="/assets/img/swisstronik2.png"
+                        alt="Swisstronik Screenshot 2"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="/assets/img/swisstronik3.png"
+                        alt="Swisstronik Screenshot 3"
+                      />
+                    </div>
+                  </div>
+             
                 </div>
-                <div class="swiper-pagination"></div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
+                <div class="project-info">
+                  <h3>Swisstronik</h3>
+                  <p>
+                    <a href="https://swisstronik.com" target="_blank">
+                      Sigma/Swisstronik</a
+                    >
+                    represents a WEB 3.0 blockchain ecosystem that lets anyone
+                    build KYC, AML, and DPR-compliant applications. This is
+                    possible thanks to the first-of-its-kind Swisstronik
+                    Compliance Suite and a combination of software and hardware
+                    privacy technologies. Swisstronik platform incorporates
+                    EVM-compatible blockchain solutions, different utilities for
+                    developers to speed up the development processes, enterprise
+                    solutions and a unique Superapp, which acts as a point of
+                    access to all open-source developments. There were 7 people
+                    on the team. I was mainly involved in the UI part. I made
+                    animations, created components such as
+                    modals/buttons/connected wagmies, and set up communication
+                    with the MetaMask. The list of technologies, I employ on
+                    Sigma projects includes, but is not limited to:
+
+                    <div class="tech-stack">
+                        <img src="assets/icons/png-clipart-html-logo-html5-logo-icons-logos-emojis-tech-companies-thumbnail.png" alt="HTML5" title="HTML5" />
+                        <img src="assets/icons/CSS3_logo.svg" alt="CSS3" title="CSS3" />
+                        <img src="assets/icons/Sass_Logo_Color.svg" alt="SCSS" title="SCSS" />
+                        <img src="assets/icons/Tailwind_CSS_Logo.svg" alt="TailwindCSS" title="TailwindCSS" />
+                        <img src="assets/icons/React-icon.svg" alt="ReactJS" title="ReactJS" />
+                        <img src="assets/icons/redux.png" alt="Redux" title="Redux" />
+                        <img src="assets/icons/Octicons-mark-github.svg" alt="Git" title="Git" />
+                        <img src="assets/icons/figma.png" alt="Figma" title="Figma" />
+                      </div>
+             
+<!--                     
+                    HTML5, CSS3,
+                    SCSS, Tailwind, ReactJS, Redux, PINIA, Figma designs
+                    integration, Git, GitHub, CI/CD. -->
+                  </p>
+                </div>
+              </div>
             </div>
+ 
+            <!-- Arincen -->
+            <div class="swiper-slide">
+              <div class="project">
+                <div class="project-slider swiper subSwiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="arincen1.jpg" alt="Arincen Screenshot 1" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="arincen2.jpg" alt="Arincen Screenshot 2" />
+                    </div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                </div>
+                <div class="project-info">
+                  <h3>Arincen</h3>
+                  <p>
+                    <a href="https://arincen.com" target="_blank">Arincen</a> is
+                    a cryptocurrency marketplace and news aggregator. I
+                    implemented the frontend with React, Redux, and TailwindCSS.
+                    Optimized performance and handled RTL/LTR setups.
+                  </p>
+                  <p><strong>Tech stack:</strong> React, Redux, TailwindCSS</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
         </div>
+      </div>
     </section>
-    
 
     <section id="hobbies">
-        <div class="container">
-            <h2 class="section-title">My hobbies</h2>
-            <p class="hobby-description">
-                I have been working out regularly in the gym for several years now to maintain strength and endurance. I also love playing the guitar - it is my way of expressing emotions through music. 🎸💪
-            </p>
-            <div class="hobby-grid">
-                <div class="hobby-item">
-                    <video src="gym.mp4" controls></video>
-                    <p>💪 Training in the gym</p>
-                </div>
-                <div class="hobby-item">
-                    <video src="guitar.mp4" controls></video>
-                    <p>🎸 Playing the guitar</p>
-                </div>
-                <div class="hobby-item">
-                    <video src="gym.mp4" controls></video>
-                    <p>💪 Training in the gym</p>
-                </div>
-                <div class="hobby-item">
-                    <video src="guitar.mp4" controls></video>
-                    <p>🎸 Playing the guitar</p>
-                </div>
-                <div class="hobby-item">
-                    <video src="guitar.mp4" controls></video>
-                    <p>🎸 Playing the guitar</p>
-                </div>
-                <div class="hobby-item">
-                    <video src="guitar.mp4" controls></video>
-                    <p>🎸 Playing the guitar</p>
-                </div>
-                <div class="hobby-item">
-                    <video src="guitar.mp4" controls></video>
-                    <p>🎸 Playing the guitar</p>
-                </div>
-                <div class="hobby-item">
-                    <video src="guitar.mp4" controls></video>
-                    <p>🎸 Playing the guitar</p>
-                </div>
-            </div>
+      <div class="container">
+        <h2 class="section-title">My hobbies</h2>
+        <p class="hobby-description">
+          I have been working out regularly in the gym for several years now to
+          maintain strength and endurance. I also love playing the guitar - it
+          is my way of expressing emotions through music. 🎸💪
+        </p>
+        <div class="hobby-grid">
+          <div class="hobby-item">
+            <video src="gym.mp4" controls></video>
+            <p>💪 Training in the gym</p>
+          </div>
+          <div class="hobby-item">
+            <video src="guitar.mp4" controls></video>
+            <p>🎸 Playing the guitar</p>
+          </div>
+          <div class="hobby-item">
+            <video src="gym.mp4" controls></video>
+            <p>💪 Training in the gym</p>
+          </div>
+          <div class="hobby-item">
+            <video src="guitar.mp4" controls></video>
+            <p>🎸 Playing the guitar</p>
+          </div>
+          <div class="hobby-item">
+            <video src="guitar.mp4" controls></video>
+            <p>🎸 Playing the guitar</p>
+          </div>
+          <div class="hobby-item">
+            <video src="guitar.mp4" controls></video>
+            <p>🎸 Playing the guitar</p>
+          </div>
+          <div class="hobby-item">
+            <video src="guitar.mp4" controls></video>
+            <p>🎸 Playing the guitar</p>
+          </div>
+          <div class="hobby-item">
+            <video src="guitar.mp4" controls></video>
+            <p>🎸 Playing the guitar</p>
+          </div>
         </div>
+      </div>
     </section>
-    
-
 
     <section id="contact">
-        <div class="container">
-            <h2 class="section-title">Contact me</h2>
-            <p class="contact-subtitle">Available for collaboration and interesting projects 🚀</p>
-            <div class="contact-links">
-                <a href="mailto:myemail@example.com" class="contact-item" target="_blank">
-                    <img src="./assets/icons/Gmail_icon_(2020).svg" alt="Email"> myemail@example.com
-                </a>
-                <a href="https://linkedin.com/in/myprofile" class="contact-item" target="_blank">
-                    <img src="./assets/icons/LinkedIn_logo_initials.png" alt="LinkedIn"> linkedin.com/in/myprofile
-                </a>
-                <a href="https://github.com/mygithub" class="contact-item" target="_blank">
-                    <img src="./assets/icons/Octicons-mark-github.svg" alt="GitHub"> github.com/mygithub
-                </a>
-            </div>
+      <div class="container">
+        <h2 class="section-title">Contact me</h2>
+        <p class="contact-subtitle">
+          Available for collaboration and interesting projects 🚀
+        </p>
+        <div class="contact-links">
+          <a
+            href="mailto:myemail@example.com"
+            class="contact-item"
+            target="_blank"
+          >
+            <img src="./assets/icons/Gmail_icon_(2020).svg" alt="Email" />
+            myemail@example.com
+          </a>
+          <a
+            href="https://linkedin.com/in/myprofile"
+            class="contact-item"
+            target="_blank"
+          >
+            <img
+              src="./assets/icons/LinkedIn_logo_initials.png"
+              alt="LinkedIn"
+            />
+            linkedin.com/in/myprofile
+          </a>
+          <a
+            href="https://github.com/mygithub"
+            class="contact-item"
+            target="_blank"
+          >
+            <img src="./assets/icons/Octicons-mark-github.svg" alt="GitHub" />
+            github.com/mygithub
+          </a>
         </div>
+      </div>
     </section>
-    
 
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

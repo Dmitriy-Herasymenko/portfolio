@@ -34,17 +34,34 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 document.addEventListener("DOMContentLoaded", function () {
-    new Swiper(".mySwiper", {
-        slidesPerView: 3, // Показуємо одразу 3 роботи
+    // Ініціалізація головного Swiper (проекти)
+    new Swiper(".mainSwiper", {
+        slidesPerView: 1,
         spaceBetween: 30,
-        loop: true,
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
         navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
+            nextEl: ".mainSwiper .swiper-button-next",
+            prevEl: ".mainSwiper .swiper-button-prev",
         },
     });
+
+    // Ініціалізація вкладених Swiper (скріншоти проектів)
+    document.querySelectorAll(".subSwiper").forEach((swiperEl) => {
+        new Swiper(swiperEl, {
+            slidesPerView: 1,
+            pagination: {
+                el: swiperEl.querySelector(".swiper-pagination"), // Правильне позиціонування точок
+                clickable: true,
+            },
+            navigation: {
+                nextEl: swiperEl.querySelector(".swiper-button-next"),
+                prevEl: swiperEl.querySelector(".swiper-button-prev"),
+            },
+            autoplay: {
+                delay: 3000, // Перемикання кожні 3 секунди
+                disableOnInteraction: false, // Продовжує прокручування після взаємодії
+            },
+            loop: true,
+        });
+    });
 });
+
