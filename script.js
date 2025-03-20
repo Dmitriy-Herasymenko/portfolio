@@ -31,3 +31,20 @@ document.addEventListener("DOMContentLoaded", function () {
     // Постійне додавання нових зірок
     setInterval(createStar, 300);
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    new Swiper(".mySwiper", {
+        slidesPerView: 3, // Показуємо одразу 3 роботи
+        spaceBetween: 30,
+        loop: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+});

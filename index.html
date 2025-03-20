@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Портфоліо | Dmytro</title>
+    <title>Portfolio | Dmytro</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
 </head>
@@ -19,32 +19,30 @@
     </header>
 
     <section id="about">
-        <div class="container">
-            <h2>Про мене</h2>
-            <p>Привіт! Я фронтенд-розробник із пристрастю до сучасного UI/UX та ретро-дизайну. Люблю створювати анімовані інтерфейси, працювати з React та досліджувати нові технології.</p>
-        </div>
-    </section>
-
-    <section id="hobbies">
-        <div class="container">
-            <h2>Мої хобі</h2>
-            <ul class="hobby-list">
-                <li>🎸 Гра на гітарі</li>
-                <li>🎮 Ретро-ігри та Pixel Art</li>
-                <li>📷 Аналогова фотографія</li>
-                <li>🚀 Дизайн у стилі Synthwave</li>
-            </ul>
+        <div class="container about-container">
+            <div class="about-image">
+                <img src="https://media.gq-magazine.co.uk/photos/5d1392c4533a23ca42c61dad/master/w_2580%2Cc_limit/Rob-Lowe-GQ_23July15_getty_b.jpg" alt="Retro Portrait" class="retro-image">
+            </div>
+            <div class="about-text">
+                <h2>About me</h2>
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+                </p>
+            </div>
         </div>
     </section>
 
     <section id="works">
         <div class="container">
-            <h2>Мої роботи</h2>
+            <h2 class="section-title">My Works</h2>
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="project1.jpg" alt="Проект 1"></div>
-                    <div class="swiper-slide"><img src="project2.jpg" alt="Проект 2"></div>
-                    <div class="swiper-slide"><img src="project3.jpg" alt="Проект 3"></div>
+                    <div class="swiper-slide"><img src="https://i0.wp.com/365webresources.com/wp-content/uploads/2023/03/ArFa-Admin-Dashboard-scaled.webp?ssl=1" alt="Проект 1"></div>
+                    <div class="swiper-slide"><img src="https://i0.wp.com/365webresources.com/wp-content/uploads/2023/03/ArFa-Admin-Dashboard-scaled.webp?ssl=1" alt="Проект 2"></div>
+                    <div class="swiper-slide"><img src="https://i0.wp.com/365webresources.com/wp-content/uploads/2023/03/ArFa-Admin-Dashboard-scaled.webp?ssl=1" alt="Проект 3"></div>
+                    <div class="swiper-slide"><img src="https://i0.wp.com/365webresources.com/wp-content/uploads/2023/03/ArFa-Admin-Dashboard-scaled.webp?ssl=1" alt="Проект 4"></div>
+                    <div class="swiper-slide"><img src="https://i0.wp.com/365webresources.com/wp-content/uploads/2023/03/ArFa-Admin-Dashboard-scaled.webp?ssl=1" alt="Проект 5"></div>
+                    <div class="swiper-slide"><img src="https://i0.wp.com/365webresources.com/wp-content/uploads/2023/03/ArFa-Admin-Dashboard-scaled.webp?ssl=1" alt="Проект 6"></div>
                 </div>
                 <div class="swiper-pagination"></div>
                 <div class="swiper-button-next"></div>
@@ -52,14 +50,71 @@
             </div>
         </div>
     </section>
+    
+
+    <section id="hobbies">
+        <div class="container">
+            <h2 class="section-title">My hobbies</h2>
+            <p class="hobby-description">
+                I have been working out regularly in the gym for several years now to maintain strength and endurance. I also love playing the guitar - it is my way of expressing emotions through music. 🎸💪
+            </p>
+            <div class="hobby-grid">
+                <div class="hobby-item">
+                    <video src="gym.mp4" controls></video>
+                    <p>💪 Training in the gym</p>
+                </div>
+                <div class="hobby-item">
+                    <video src="guitar.mp4" controls></video>
+                    <p>🎸 Playing the guitar</p>
+                </div>
+                <div class="hobby-item">
+                    <video src="gym.mp4" controls></video>
+                    <p>💪 Training in the gym</p>
+                </div>
+                <div class="hobby-item">
+                    <video src="guitar.mp4" controls></video>
+                    <p>🎸 Playing the guitar</p>
+                </div>
+                <div class="hobby-item">
+                    <video src="guitar.mp4" controls></video>
+                    <p>🎸 Playing the guitar</p>
+                </div>
+                <div class="hobby-item">
+                    <video src="guitar.mp4" controls></video>
+                    <p>🎸 Playing the guitar</p>
+                </div>
+                <div class="hobby-item">
+                    <video src="guitar.mp4" controls></video>
+                    <p>🎸 Playing the guitar</p>
+                </div>
+                <div class="hobby-item">
+                    <video src="guitar.mp4" controls></video>
+                    <p>🎸 Playing the guitar</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
 
     <section id="contact">
         <div class="container">
-            <h2>Контакти</h2>
-            <p>Email: myemail@example.com</p>
-            <p>LinkedIn: <a href="#">linkedin.com/in/myprofile</a></p>
+            <h2 class="section-title">Contact me</h2>
+            <p class="contact-subtitle">Available for collaboration and interesting projects 🚀</p>
+            <div class="contact-links">
+                <a href="mailto:myemail@example.com" class="contact-item" target="_blank">
+                    <img src="./assets/icons/Gmail_icon_(2020).svg" alt="Email"> myemail@example.com
+                </a>
+                <a href="https://linkedin.com/in/myprofile" class="contact-item" target="_blank">
+                    <img src="./assets/icons/LinkedIn_logo_initials.png" alt="LinkedIn"> linkedin.com/in/myprofile
+                </a>
+                <a href="https://github.com/mygithub" class="contact-item" target="_blank">
+                    <img src="./assets/icons/Octicons-mark-github.svg" alt="GitHub"> github.com/mygithub
+                </a>
+            </div>
         </div>
     </section>
+    
 
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
