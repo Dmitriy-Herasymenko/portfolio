@@ -1,11 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Портфоліо | Dmytro</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
 </head>
 <body>
-    <h1>Hello world</h1>
+
+    <header class="hero">
+        <div class="stars"></div>
+        <div class="container">
+            <h1 class="title">Dmytro Herasymenko</h1>
+            <p class="subtitle">Frontend Developer</p>
+            <a href="#about" class="btn">About Me</a>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <h2>Про мене</h2>
+            <p>Привіт! Я фронтенд-розробник із пристрастю до сучасного UI/UX та ретро-дизайну. Люблю створювати анімовані інтерфейси, працювати з React та досліджувати нові технології.</p>
+        </div>
+    </section>
+
+    <section id="hobbies">
+        <div class="container">
+            <h2>Мої хобі</h2>
+            <ul class="hobby-list">
+                <li>🎸 Гра на гітарі</li>
+                <li>🎮 Ретро-ігри та Pixel Art</li>
+                <li>📷 Аналогова фотографія</li>
+                <li>🚀 Дизайн у стилі Synthwave</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="works">
+        <div class="container">
+            <h2>Мої роботи</h2>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="project1.jpg" alt="Проект 1"></div>
+                    <div class="swiper-slide"><img src="project2.jpg" alt="Проект 2"></div>
+                    <div class="swiper-slide"><img src="project3.jpg" alt="Проект 3"></div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Контакти</h2>
+            <p>Email: myemail@example.com</p>
+            <p>LinkedIn: <a href="#">linkedin.com/in/myprofile</a></p>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
