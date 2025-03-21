@@ -1,12 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Audiowide&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap');
 
+:root {
+    --primary-color: #FF4081;
+    --primary-shadow: rgba(255, 64, 129, 0.8);
+    --primary-shadow-intense: rgba(255, 64, 129, 1);
+    --background-gradient: linear-gradient(135deg, #300047, #8B0000);
+    --text-color: #f2f7f2;
+    --box-shadow-color: rgba(255, 64, 129, 0.6);
+    --blur-background: rgba(255, 64, 129, 0.2);
+    --border-color: rgba(255, 64, 129, 0.4);
+}
+
+
 body {
     font-family: 'IBM Plex Mono', monospace;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #300047, #8B0000);
-    color: #f2f7f2;
+    background: var(--background-gradient);
+    color: var(--text-color);
     overflow-x: hidden;
 }
 
@@ -23,7 +35,7 @@ h2 {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 30px;
-    text-shadow: 0 0 10px #FF4081, 0 0 20px #FF4081;
+    text-shadow: 0 0 10px var(--primary-color), 0 0 20px var(--primary-color);
 }
 
 .hero {
@@ -92,8 +104,8 @@ h2 {
     font-family: 'Orbitron', sans-serif;
     font-size: 4rem;
     font-weight: 700;
-    color: #FF4081;
-    text-shadow: 0 0 15px #FF4081, 0 0 25px #FF4081, 0 0 35px #FF4081;
+    color: var(--primary-color);
+    text-shadow: 0 0 15px var(--primary-color), 0 0 25px var(--primary-color), 0 0 35px var(--primary-color);
     position: relative;
     z-index: 2;
     animation: neon-flicker 1.5s infinite alternate;
@@ -125,17 +137,16 @@ h2 {
 }
 
 
+
 @keyframes neon-flicker {
     0% {
-        text-shadow: 0 0 15px #FF4081, 0 0 25px #FF4081;
+        text-shadow: 0 0 15px var(--primary-color), 0 0 25px var(--primary-color);
     }
-
     50% {
-        text-shadow: 0 0 20px #FF1053, 0 0 30px #FF1053;
+        text-shadow: 0 0 20px var(--primary-color), 0 0 30px var(--primary-color)
     }
-
     100% {
-        text-shadow: 0 0 15px #FF4081, 0 0 25px #FF4081;
+        text-shadow: 0 0 15px var(--primary-color), 0 0 25px var(--primary-color);
     }
 }
 
@@ -143,15 +154,15 @@ h2 {
 .btn {
     padding-top: 120px;
     padding: 12px 30px;
-    background: #FF4081;
-    color: #f2f7f2;
+    background: var(--primary-color);
+    color: var(--text-color);
     text-decoration: none;
     font-weight: bold;
     border-radius: 25px;
     transition: 0.3s;
     position: relative;
     z-index: 2;
-    box-shadow: 0 0 10px #FF4081;
+    box-shadow: 0 0 10px var(--primary-color);
     animation: glow 1.5s infinite alternate;
 }
 
@@ -167,13 +178,57 @@ h2 {
 
 }
 
+/* Контейнер about */
+#about {
+    position: relative; /* Щоб хвиля залишалася всередині */
+    overflow: hidden; /* Запобігає виходу за межі */
+}
+
+/* Хвиля пульсу */
+.pulse-wave {
+    position: absolute;
+    top: 50%;
+    left: -10%; /* Починає рух всередині #about */
+    width: 120px;
+    height: 20px;
+    background: rgba(255, 64, 129, 0.8);
+    filter: blur(20px);
+    box-shadow: 0 0 25px rgba(255, 64, 129, 1);
+    border-radius: 50%;
+    animation: pulse-move 4s linear infinite;
+}
+
+/* Анімація руху пульсу */
+@keyframes pulse-move {
+    0% {
+        left: -10%;
+        transform: scaleX(1);
+        opacity: 1;
+    }
+    30% {
+        left: 25%; /* Обтікає картинку */
+        transform: scaleX(1.5);
+    }
+    60% {
+        left: 60%; /* Проходить по тексту */
+        transform: scaleX(1.2);
+        opacity: 0;
+    }
+    100% {
+        left: 100%; /* Виходить за межі контейнера */
+        opacity: 0;
+    }
+}
+
+
 .about-image img {
-    width: 420px;
+    width: 520px;
     height: 420px;
     border-radius: 15px;
     object-fit: cover;
     /* filter: contrast(1.2) brightness(0.9) saturate(1.5) hue-rotate(-15deg); */
-    box-shadow: 0 0 20px rgba(255, 64, 129, 0.5);
+    box-shadow: 0 0 20px var(--primary-shadow);
+    animation: glow 2s infinite alternate;
     /* transition: transform 0.3s ease-in-out; */
 }
 
@@ -184,7 +239,7 @@ h2 {
 .about-text {
     max-width: 550px;
     text-align: left;
-    color: #f2f7f2;
+    color: var(--text-color);
 }
 
 
@@ -226,6 +281,7 @@ h2 {
     transform: scale(1.03);
 }
 
+
 .project-info {
     text-align: center;
     margin-top: 15px;
@@ -233,8 +289,8 @@ h2 {
 
 .project-info h3 {
     font-size: 1.2rem;
-    color: #FF4081;
-    text-shadow: 0 0 5px #FF4081;
+    color: var(--primary-color);
+    text-shadow: 0 0 5px var(--primary-color);
 }
 
 .swiper {
@@ -242,14 +298,12 @@ h2 {
     padding-bottom: 50px;
 }
 
-.swiper-slide {
-    box-shadow: 0 0 40px rgba(255, 64, 129, 0.5);
-}
+
 
 
 .swiper-button-next,
 .swiper-button-prev {
-    color: #ff4081 !important;
+    color: var(--primary-color) !important;
 
 }
 
@@ -275,7 +329,7 @@ h2 {
 
 .swiper-button-next,
 .swiper-button-prev {
-    color: #ff4081 !important;
+    color: var(--primary-color) !important;
 }
 
 .tech-stack {
@@ -302,7 +356,7 @@ h2 {
     padding: 40px 0;
     text-align: center;
     /* background: linear-gradient(135deg, #2a003d, #710000); */
-    color: #f2f7f2;
+    color: var(--text-color);
 }
 
 
@@ -311,7 +365,7 @@ h2 {
     font-size: 1.2rem;
     max-width: 600px;
     margin: 0 auto 30px;
-    color: #f2f7f2;
+    color: var(--text-color);
     opacity: 0.9;
 }
 
@@ -375,7 +429,7 @@ h2 {
 
 .contact-subtitle {
     font-size: 1.2rem;
-    color: #f2f7f2;
+    color: var(--text-color);
     margin-bottom: 30px;
     opacity: 0.8;
 }
@@ -393,23 +447,23 @@ h2 {
     align-items: center;
     gap: 12px;
     font-size: 1.3rem;
-    color: #f2f7f2;
+    color: var(--text-color);
     text-decoration: none;
     padding: 12px 20px;
     border-radius: 30px;
     transition: 0.3s ease-in-out;
-    box-shadow: 0 0 10px rgba(255, 64, 129, 0.6);
-    background: rgba(255, 64, 129, 0.2);
+    box-shadow: 0 0 10px var(--box-shadow-color);
+    background: var(--blur-background);
     backdrop-filter: blur(8px);
-    border: 2px solid rgba(255, 64, 129, 0.4);
+    border: 2px solid var(--border-color);
     position: relative;
     overflow: hidden;
 }
 
 .contact-item:hover {
-    color: #FF4081;
+    color: var(--primary-color);
     background: rgba(255, 64, 129, 0.3);
-    box-shadow: 0 0 15px rgba(255, 64, 129, 0.8);
+    box-shadow: 0 0 20px var(--primary-shadow-intense);
     transform: scale(1.05);
 }
 
