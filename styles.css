@@ -736,4 +736,11 @@ iframe {
         width: 35px;
         /* Ще компактніше для малих екранів */
     }
+
+    .skills {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+padding: 0;
+    }
 }
