@@ -44,12 +44,12 @@ document.addEventListener("DOMContentLoaded", function () {
         },
     });
 
-    // Ініціалізація вкладених Swiper (скріншоти проектів)
+
     document.querySelectorAll(".subSwiper").forEach((swiperEl) => {
         new Swiper(swiperEl, {
             slidesPerView: 1,
             pagination: {
-                el: swiperEl.querySelector(".swiper-pagination"), // Правильне позиціонування точок
+                el: swiperEl.querySelector(".swiper-pagination"), 
                 clickable: true,
             },
             navigation: {
@@ -57,8 +57,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 prevEl: swiperEl.querySelector(".swiper-button-prev"),
             },
             autoplay: {
-                delay: 3000, // Перемикання кожні 3 секунди
-                disableOnInteraction: false, // Продовжує прокручування після взаємодії
+                delay: 3000, 
+                disableOnInteraction: false, 
             },
             loop: true,
         });

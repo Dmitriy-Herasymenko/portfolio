@@ -2,15 +2,37 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap');
 
 :root {
+    /* Основні кольори */
     --primary-color: #FF4081;
     --primary-shadow: rgba(255, 64, 129, 0.8);
     --primary-shadow-intense: rgba(255, 64, 129, 1);
-    --background-gradient: linear-gradient(135deg, #300047, #8B0000);
+
+    /* Фонові кольори */
+    --background-start: #300047;
+    --background-end: #8B0000;
+    --background-gradient: linear-gradient(135deg, var(--background-start), var(--background-end));
+
+    /* Текст */
     --text-color: #f2f7f2;
+
+    /* Тіні */
     --box-shadow-color: rgba(255, 64, 129, 0.6);
     --blur-background: rgba(255, 64, 129, 0.2);
     --border-color: rgba(255, 64, 129, 0.4);
+
+    /* Хвиля */
+    --pulse-color: rgba(255, 64, 129, 0.8);
+    --pulse-shadow: rgba(255, 64, 129, 1);
+
+    /* Кольори кнопок */
+    --button-background: var(--primary-color);
+    --button-shadow: 0 0 10px var(--primary-color);
+
+    /* Колір для технологічних іконок */
+    --icon-shadow: rgba(255, 255, 255, 0.8);
+    --icon-hover-shadow: rgba(255, 64, 129, 0.9);
 }
+
 
 
 body {
@@ -119,7 +141,9 @@ h2 {
 .tech-icons {
     display: flex;
     justify-content: center;
+    margin: auto;
     gap: 20px;
+    max-width: 500px;
     margin-top: 15px;
 }
 
@@ -127,13 +151,13 @@ h2 {
     margin-bottom: 50px;
     width: 50px;
     height: auto;
-    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
+    filter: drop-shadow(0 0 10px var(--icon-shadow));
     transition: transform 0.3s ease-in-out;
 }
 
 .tech-icons img:hover {
     transform: scale(1.2);
-    filter: drop-shadow(0 0 20px rgba(255, 64, 129, 0.9));
+    filter: drop-shadow(0 0 20px var(--icon-hover-shadow));
 }
 
 
@@ -142,9 +166,11 @@ h2 {
     0% {
         text-shadow: 0 0 15px var(--primary-color), 0 0 25px var(--primary-color);
     }
+
     50% {
         text-shadow: 0 0 20px var(--primary-color), 0 0 30px var(--primary-color)
     }
+
     100% {
         text-shadow: 0 0 15px var(--primary-color), 0 0 25px var(--primary-color);
     }
@@ -180,20 +206,23 @@ h2 {
 
 /* Контейнер about */
 #about {
-    position: relative; /* Щоб хвиля залишалася всередині */
-    overflow: hidden; /* Запобігає виходу за межі */
+    position: relative;
+    /* Щоб хвиля залишалася всередині */
+    overflow: hidden;
+    /* Запобігає виходу за межі */
 }
 
 /* Хвиля пульсу */
 .pulse-wave {
     position: absolute;
     top: 50%;
-    left: -10%; /* Починає рух всередині #about */
+    left: -10%;
+    /* Починає рух всередині #about */
     width: 120px;
     height: 20px;
-    background: rgba(255, 64, 129, 0.8);
+    background: var(--pulse-color);
     filter: blur(20px);
-    box-shadow: 0 0 25px rgba(255, 64, 129, 1);
+    box-shadow: 0 0 25px var(--pulse-shadow);
     border-radius: 50%;
     animation: pulse-move 4s linear infinite;
 }
@@ -205,17 +234,23 @@ h2 {
         transform: scaleX(1);
         opacity: 1;
     }
+
     30% {
-        left: 25%; /* Обтікає картинку */
+        left: 25%;
+        /* Обтікає картинку */
         transform: scaleX(1.5);
     }
+
     60% {
-        left: 60%; /* Проходить по тексту */
+        left: 60%;
+        /* Проходить по тексту */
         transform: scaleX(1.2);
         opacity: 0;
     }
+
     100% {
-        left: 100%; /* Виходить за межі контейнера */
+        left: 100%;
+        /* Виходить за межі контейнера */
         opacity: 0;
     }
 }
@@ -279,6 +314,7 @@ h2 {
     width: 100%;
     border-radius: 10px;
     transform: scale(1.03);
+    object-fit: contain; 
 }
 
 
@@ -308,10 +344,10 @@ h2 {
 }
 
 
+
 .swiper-slide img {
     width: 100%;
     height: 400px;
-    object-fit: cover;
     border-radius: 10px;
     filter: contrast(1.2) saturate(1.3);
 
@@ -319,7 +355,7 @@ h2 {
 
 .swiper-slide {
     overflow: visible !important;
-    height: 415px;
+    height: 400px;
 }
 
 .swiper-slide:hover {
@@ -336,12 +372,14 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 12px; /* Відстань між іконками */
+    gap: 12px;
+    /* Відстань між іконками */
     padding: 10px;
 }
 
 .tech-stack img {
-    width: 50px;  /* Оптимальний розмір для мобільних */
+    width: 50px;
+    /* Оптимальний розмір для мобільних */
     height: auto;
     transition: transform 0.3s ease-in-out;
     filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.6));
@@ -371,7 +409,7 @@ h2 {
 
 .hobby-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     /* Автоматична адаптація */
     gap: 30px;
     justify-content: center;
@@ -383,6 +421,13 @@ h2 {
     width: 100%;
     border-radius: 10px;
 }
+
+iframe {
+    width: 100%;
+    height: 200px; 
+    border-radius: 10px; 
+    border: none; 
+  }
 
 .hobby-item {
     background: rgba(255, 64, 129, 0.1);
@@ -537,7 +582,7 @@ h2 {
         gap: 15px;
     }
 
-    
+
 }
 
 @media (max-width: 768px) {
@@ -562,13 +607,16 @@ h2 {
     .tech-icons img {
         width: 40px;
     }
+
     .tech-stack {
         gap: 6px;
     }
 
     .tech-stack img {
-        width: 35px; /* Ще компактніше для малих екранів */
+        width: 35px;
+        /* Ще компактніше для малих екранів */
     }
+
     .about-container {
         flex-direction: column;
         text-align: center;
@@ -624,9 +672,13 @@ h2 {
     .subtitle {
         font-size: 1rem;
     }
+    .tech-icons {
+        max-width: 250px;
+        gap: 7px;
+    }
 
     .tech-icons img {
-        width: 35px;
+        width: 20px;
     }
 
     .about-image img {
@@ -659,6 +711,7 @@ h2 {
     }
 
     .tech-stack img {
-        width: 35px; /* Ще компактніше для малих екранів */
+        width: 35px;
+        /* Ще компактніше для малих екранів */
     }
 }
