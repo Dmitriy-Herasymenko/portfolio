@@ -38,6 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
     new Swiper(".mainSwiper", {
         slidesPerView: 1,
         spaceBetween: 30,
+        
         navigation: {
             nextEl: ".mainSwiper .swiper-button-next",
             prevEl: ".mainSwiper .swiper-button-prev",
