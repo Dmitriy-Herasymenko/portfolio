@@ -744,3 +744,7 @@ iframe {
 padding: 0;
     }
 }
+
+.swiper-slide[id] {
+    scroll-margin-top: 120px; 
+  }
