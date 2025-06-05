@@ -66,3 +66,17 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+const themeLink = document.getElementById('theme-style');
+const toggleBtn = document.getElementById('toggle-theme');
+
+// Визначаємо поточну тему зі збереженого або стандартну
+const currentTheme = localStorage.getItem('theme') || 'styles';
+themeLink.href = `${currentTheme}.css`;
+
+toggleBtn.addEventListener('click', () => {
+  const isPixel = themeLink.href.includes('pixel-styles.css');
+  const newTheme = isPixel ? 'styles' : 'pixel-styles';
+
+  themeLink.href = `${newTheme}.css`;
+  localStorage.setItem('theme', newTheme);
+});

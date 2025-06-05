@@ -60,6 +60,21 @@ h2 {
     text-shadow: 0 0 10px var(--primary-color), 0 0 20px var(--primary-color);
 }
 
+#toggle-theme {
+    display: inline-block;
+    background: var(--primary-color);
+    color: var(--text-color);
+    padding: 8px 16px;
+    margin-left: 90%;
+    border: none;
+    font-weight: bold;
+    text-decoration: none;
+    position: fixed;
+
+    z-index: 1;
+    transition: background 0.3s;
+}
+
 .hero {
     height: 100vh;
     display: flex;
@@ -298,7 +313,7 @@ h2 {
 
 .skill_title {
     text-align: left;
-    
+
 }
 
 .info_skill {
@@ -336,7 +351,7 @@ h2 {
     width: 100%;
     border-radius: 10px;
     transform: scale(1.03);
-    object-fit: contain; 
+    object-fit: contain;
 }
 
 
@@ -446,10 +461,10 @@ h2 {
 
 iframe {
     width: 100%;
-    height: 200px; 
-    border-radius: 10px; 
-    border: none; 
-  }
+    height: 200px;
+    border-radius: 10px;
+    border: none;
+}
 
 .hobby-item {
     background: rgba(255, 64, 129, 0.1);
@@ -694,6 +709,7 @@ iframe {
     .subtitle {
         font-size: 1rem;
     }
+
     .tech-icons {
         max-width: 250px;
         gap: 7px;
@@ -741,10 +757,10 @@ iframe {
         display: flex;
         flex-direction: column;
         gap: 10px;
-padding: 0;
+        padding: 0;
     }
 }
 
 .swiper-slide[id] {
-    scroll-margin-top: -120px; 
-  }
+    scroll-margin-top: -120px;
+}
